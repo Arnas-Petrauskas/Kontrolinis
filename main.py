@@ -136,7 +136,7 @@ def Deleting():
             elif(select_me is not i):
                 print(f"Prašome vesti tik šiuos skaičius {i}")
         except ValueError:
-            print(f"Prašome vesti skaičius nuo 0 iki {i}")
+            print(f"Prašome vesti tik šiuos skaičius {i}")
     delete_me = session.query(Finance).filter_by(id=int(select_me)).first()
     session.delete(delete_me)
     session.commit()
@@ -168,9 +168,9 @@ def Update_Income_expense():
                 session.commit()
                 break
             else:
-                print(f"Prašome vesti skaičius nuo 0 iki {i}")
+                print(f"Prašome vesti tik šiuos skaičius {i}")
         except ValueError:
-            print(f"Prašome vesti skaičius nuo 0 iki {i}")
+            print(f"Prašome vesti tik šiuos skaičius {i}")
     
 
 Start()
